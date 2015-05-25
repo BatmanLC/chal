@@ -1,65 +1,75 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="195" inline="true" x="128" y="344">
-    <field name="VAR">time</field>
-    <value name="VALUE">
-      <block type="math_number" id="202">
-        <field name="NUM">4000</field>
+  <block type="led_select" id="272" inline="true" x="133" y="308">
+    <field name="ACTION">ON</field>
+    <value name="LED">
+      <block type="math_number" id="279">
+        <field name="NUM">5000</field>
       </block>
     </value>
     <next>
-      <block type="controls_whileUntil" id="165" inline="false">
-        <field name="MODE">UNTIL</field>
-        <value name="NUMBER">
-          <block type="logic_compare" id="239" inline="true">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="variables_get" id="256">
-                <field name="VAR">time</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="263">
-                <field name="NUM">200</field>
-              </block>
-            </value>
+      <block type="variables_set" id="195" inline="true">
+        <field name="VAR">time</field>
+        <value name="VALUE">
+          <block type="math_number" id="202">
+            <field name="NUM">4000</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="movement_forward" id="10">
-            <next>
-              <block type="robot_delay" id="31" inline="true">
-                <value name="DELAY">
-                  <block type="variables_get" id="206">
+        <next>
+          <block type="controls_whileUntil" id="165" inline="false">
+            <field name="MODE">UNTIL</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="239" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="256">
                     <field name="VAR">time</field>
                   </block>
                 </value>
+                <value name="B">
+                  <block type="math_number" id="263">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_forward" id="10">
                 <next>
-                  <block type="movement_right" id="106">
+                  <block type="robot_delay" id="31" inline="true">
+                    <value name="DELAY">
+                      <block type="variables_get" id="206">
+                        <field name="VAR">time</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="robot_delay" id="107" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="108">
-                            <field name="NUM">1280</field>
-                          </block>
-                        </value>
+                      <block type="movement_right" id="106">
                         <next>
-                          <block type="variables_set" id="220" inline="true">
-                            <field name="VAR">time</field>
-                            <value name="VALUE">
-                              <block type="math_arithmetic" id="173" inline="true">
-                                <field name="OP">MINUS</field>
-                                <value name="A">
-                                  <block type="variables_get" id="210">
-                                    <field name="VAR">time</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="193">
-                                    <field name="NUM">300</field>
+                          <block type="robot_delay" id="107" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="108">
+                                <field name="NUM">1280</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="220" inline="true">
+                                <field name="VAR">time</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="173" inline="true">
+                                    <field name="OP">MINUS</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="210">
+                                        <field name="VAR">time</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="193">
+                                        <field name="NUM">300</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
                               </block>
-                            </value>
+                            </next>
                           </block>
                         </next>
                       </block>
@@ -67,9 +77,9 @@
                   </block>
                 </next>
               </block>
-            </next>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
