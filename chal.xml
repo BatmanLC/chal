@@ -11,7 +11,7 @@
         <field name="MODE">UNTIL</field>
         <value name="NUMBER">
           <block type="logic_compare" id="6" inline="true">
-            <field name="OP">GT</field>
+            <field name="OP">LT</field>
             <value name="A">
               <block type="variables_get" id="7">
                 <field name="VAR">time</field>
@@ -97,6 +97,9 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="movement_stop" id="73"></block>
+        </next>
       </block>
     </next>
   </block>
